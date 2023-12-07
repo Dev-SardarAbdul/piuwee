@@ -45,7 +45,7 @@ const Hero = () => {
               </span>
             </h1>
             <button
-              onClick={() => router.push("/adventures/constructor")}
+              onClick={() => router.push("/adventures")}
               className="inline-flex  items-center justify-center rounded-md border border-purple-500 bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 animate-gradient px-4 py-2 text-xl font-medium text-white hover:from-purple-600 hover:via-pink-600 hover:to-purple-600 cursor-pointer small xs:w-auto mt-[.5rem] max-lg:hidden"
             >
               Create a Book
