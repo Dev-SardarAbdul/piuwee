@@ -25,7 +25,7 @@ function SliderComp({
     <div>
       <Swiper
         modules={[Navigation, Pagination]}
-        spaceBetween={40}
+        spaceBetween={20}
         navigation
         pagination={{ clickable: true }}
         breakpoints={{
@@ -33,7 +33,7 @@ function SliderComp({
             slidesPerView: 1,
           },
           450: {
-            slidesPerView: 1.3,
+            slidesPerView: 1.5,
           },
           600: {
             slidesPerView: 1.8,
@@ -48,24 +48,21 @@ function SliderComp({
       >
         {swiperData?.map((item, index) => (
           <SwiperSlide key={index}>
-            <div
-              className="relative min-h-[350px] mx-auto"
-              style={{ width: 325 }}
-            >
-              <div className="absolute inset-0 px-2  w-[85%] h-[90%] bg-[#f09dab] rounded-[20px]">
+            <div className="relative h-[350px] mx-auto">
+              <div className="absolute inset-0 px-2  w-[100%] h-[90%] bg-[#f09dab] rounded-[20px]">
                 <Image
                   src={item.character}
                   className="w-full h-full"
                   alt="character type"
                 />
-                <div className="absolute top-[5px] left-0 z-10 ">
+                <div className="absolute top-[0px] w-full h-full  left-0 z-10 flex justify-center items-center ">
                   {gender === "girl" ? (
                     <GirlHairs index={index} hairColor={hairColor} />
                   ) : (
                     <BoyHairs index={index} hairColor={hairColor} />
                   )}
                 </div>
-                <div className="absolute left-0 z-10 w-full h-full top-0 rounded-[20px]">
+                <div className="absolute left-0 z-10 w-full h-full top-0 rounded-[20px] ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     xmlSpace="preserve"
@@ -85,7 +82,7 @@ function SliderComp({
                     src={
                       glassesType == "rounded" ? glassesRound : glassesCurved
                     }
-                    className="absolute left-0 z-10 top-[5px]"
+                    className="absolute left-0 z-10 w-full h-full top-0 rounded-[0px] "
                     alt="character glasses"
                   />
                 )}
